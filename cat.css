@@ -1,0 +1,198 @@
+body {
+    font-family: sans-serif;
+    background-color: #111d4a;
+}
+* {
+    box-sizing: border-box;
+}
+h1 {
+    color:aquamarine;
+    margin-bottom: 30px;
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Title--- */
+.navi{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Frijole', cursive;
+    background-color:white ;
+    box-shadow: 0 10px 10px rgba(50,50,50,0.5);
+    height:70px;
+}
+.catGif{
+    width:50px;
+    height:50px;
+}
+.title{
+    color:pink;
+}
+
+/* Search box --*/
+.searchbtn{
+    color: white;
+}
+.search{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Klee One', cursive;
+    font-family: 'Padauk', sans-serif;
+}
+#inputText{
+    width:250px;
+    margin-right: 20px;
+    color:black;
+}
+/* Display Images */
+.outer,.popOuter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.catBox{
+    width:250px;
+    height: 200px;
+    margin:10px;
+    border-radius: 10px;
+}
+.catimage{
+    width:250px;
+    height: 200px;
+    object-fit:cover;
+    border-radius: 10px;
+}
+.catBox:hover{
+    transform: scale(1.07);
+    transition: 0.03s ease-in-out;
+}
+
+/* PopUp */
+.closebtn{
+    text-align: center;
+    width:40px;
+    height:40px;
+    background-color:rgb(230, 231, 231);
+    color:rgb(131, 126, 126);
+    border-radius: 50%;
+    position: fixed;
+    top:130px;
+    right:25px;
+    border: none;
+    z-index: 1;
+    font-weight: bold;
+    box-shadow: -2px -5px 10px rgba(50, 20, 33, 0.3);
+}
+.closebtn:hover{
+    background-color:black;
+}
+.resultBox{
+    box-shadow: 0 10px 10px rgba(50,50,50,0.3);
+}
+.popOuter{
+    position: absolute;
+    top:150px;
+    left:30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(36, 33, 33, 100);
+    background-color:rgb(2, 253, 253);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.popTop{
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width:280px) {
+    .catBox,.catimage{
+        width:250px;
+    }
+    #inputText{
+        margin-bottom: 10px;
+    }
+    .popOuter{
+        left:0;
+        top:80px;
+    }
+    .closebtn{
+        top:155px;
+        right:0;
+        width:30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width:320px) {
+    .catBox,.catimage{
+        width:300px;
+    }
+    #inputText{
+        margin-bottom: 10px;
+    }
+    .popOuter{
+        top: 180px;
+        left: 0;
+    }
+    .closebtn{
+        top:150px;
+        right:0;
+    }
+}
+@media screen and (min-width:360px) {
+    .catBox,.catimage{
+        width:330px;
+    }
+    #inputText{
+        margin-bottom: 0px;
+    }
+    .closebtn{
+        top:140px;
+        right:0;
+    }
+    .popOuter{
+        top: 150px;
+        left: 0;
+    }
+}
+@media screen and (min-width:375px) {
+    .catBox,.catimage{
+        width:340px;
+    }
+}
+@media screen and (min-width:400px) {
+    .catBox,.catimage{
+        width:400px;
+    }
+    .closebtn{
+        top:140px;
+        right:15px;
+    }
+    
+}
+@media screen and (min-width:540px) {
+    .catBox,.catimage{
+        width:250px;
+    }
+    
+}
+@media screen and (min-width:750px) {
+    .catBox,.catimage{
+        width:300px;
+    }
+    .popOuter{
+        left:45px;
+    }
+    .closebtn{
+        top:140px;
+        right:34px;
+    }
+}
